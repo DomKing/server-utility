@@ -1,5 +1,7 @@
 package org.prcode.utility.util;
 
+import org.apache.log4j.Logger;
+
 import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
@@ -15,6 +17,7 @@ import java.util.Map;
  */
 public class MapConverter {
 
+    private static final Logger logger = Logger.getLogger(MapConverter.class);
     /**
      * 将一个 JavaBean 对象转化为一个  Map
      *
@@ -42,7 +45,7 @@ public class MapConverter {
             }
         } catch (Exception e) {
             returnMap = null;
-            e.printStackTrace();
+            logger.error(ExceptionUtil.parseException(e));
         }
         return returnMap;
     }

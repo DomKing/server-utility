@@ -1,5 +1,6 @@
 package org.prcode.utility.util;
 
+import org.apache.log4j.Logger;
 import org.prcode.utility.basic.CharsetConstant;
 
 import javax.xml.bind.JAXBContext;
@@ -16,6 +17,7 @@ import java.io.StringWriter;
  */
 public class JaxbXMLUtil {
 
+    private static final Logger logger = Logger.getLogger(JaxbXMLUtil.class);
     /**
      * JavaBean转换成xml，默认编码UTF-8
      *
@@ -34,7 +36,7 @@ public class JaxbXMLUtil {
             marshaller.marshal(obj, writer);
             result = writer.toString();
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(ExceptionUtil.parseException(e));
         }
 
         return result;
@@ -56,7 +58,7 @@ public class JaxbXMLUtil {
             Unmarshaller unmarshaller = context.createUnmarshaller();
             t = (T) unmarshaller.unmarshal(new StringReader(xml));
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(ExceptionUtil.parseException(e));
         }
 
         return t;
