@@ -18,6 +18,14 @@ public class StringUtil {
     }
 
     /**
+     * 字符串不是null且不是空串
+     * @param source 原文
+     * @return 是否不空 true | false
+     */
+    public static boolean isNotEmpty(String source) {
+        return source != null && source.length() > 0;
+    }
+    /**
      * 指定位置替换为*
      * @param source 原文
      * @param from 开始位，计数从1开始
@@ -37,5 +45,17 @@ public class StringUtil {
         }
         sb.append(source.substring(to));
         return sb.toString();
+    }
+
+    /**
+     * 两边加%，用于sql中like
+     * @param str 原文
+     * @return trim后两边加%
+     */
+    public static String turn2LikeStr(String str) {
+        if (isEmpty(str)) {
+            return "%%";
+        }
+        return "%" + str.trim() + "%";
     }
 }

@@ -17,7 +17,7 @@ public class ExceptionUtil {
      * @param e 异常
      * @return 转换后的字符串
      */
-    public static String parseException(Exception e) {
+    public static String parseException(Throwable e) {
         try {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
