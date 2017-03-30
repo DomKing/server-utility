@@ -10,49 +10,67 @@ import java.util.Date;
  */
 public class BaseDomain {
 
-    private Date sysAddTime;
-    private Date sysUpdTime;
-    private Long sysAddUser;
-    private Long sysUpdUser;
-    private Boolean sysDelState;
+    private Date sys0AddTime;
+    private Date sys0UpdTime;
+    private Long sysDelUser;
+    private Long sys0AddUser;
+    private Long sys0UpdUser;
+    private Long sys0DelUser;
+    private Byte sysDelState;
 
-    public Date getSysAddTime() {
-        return sysAddTime;
+    public Date getSys0AddTime() {
+        return sys0AddTime;
     }
 
-    public void setSysAddTime(Date sysAddTime) {
-        this.sysAddTime = sysAddTime;
+    public void setSys0AddTime(Date sys0AddTime) {
+        this.sys0AddTime = sys0AddTime;
     }
 
-    public Date getSysUpdTime() {
-        return sysUpdTime;
+    public Date getSys0UpdTime() {
+        return sys0UpdTime;
     }
 
-    public void setSysUpdTime(Date sysUpdTime) {
-        this.sysUpdTime = sysUpdTime;
+    public void setSys0UpdTime(Date sys0UpdTime) {
+        this.sys0UpdTime = sys0UpdTime;
     }
 
-    public Long getSysAddUser() {
-        return sysAddUser;
+    public Long getSysDelUser() {
+        return sysDelUser;
     }
 
-    public void setSysAddUser(Long sysAddUser) {
-        this.sysAddUser = sysAddUser;
+    public void setSysDelUser(Long sysDelUser) {
+        this.sysDelUser = sysDelUser;
     }
 
-    public Long getSysUpdUser() {
-        return sysUpdUser;
+    public Long getSys0AddUser() {
+        return sys0AddUser;
     }
 
-    public void setSysUpdUser(Long sysUpdUser) {
-        this.sysUpdUser = sysUpdUser;
+    public void setSys0AddUser(Long sys0AddUser) {
+        this.sys0AddUser = sys0AddUser;
     }
 
-    public Boolean getSysDelState() {
+    public Long getSys0UpdUser() {
+        return sys0UpdUser;
+    }
+
+    public void setSys0UpdUser(Long sys0UpdUser) {
+        this.sys0UpdUser = sys0UpdUser;
+    }
+
+    public Long getSys0DelUser() {
+        return sys0DelUser;
+    }
+
+    public void setSys0DelUser(Long sys0DelUser) {
+        this.sys0DelUser = sys0DelUser;
+    }
+
+    public Byte getSysDelState() {
         return sysDelState;
     }
 
-    public void setSysDelState(Boolean sysDelState) {
+    public void setSysDelState(Byte sysDelState) {
         this.sysDelState = sysDelState;
     }
 }

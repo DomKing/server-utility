@@ -2,7 +2,6 @@ package org.prcode.utility.util;
 
 import org.apache.log4j.Logger;
 import org.prcode.utility.basic.CharsetConstant;
-import org.prcode.utility.exception.AppException;
 import org.prcode.utility.util.support.DefaultX509TrustManager;
 import org.prcode.utility.util.support.HttpMethod;
 
@@ -70,6 +69,8 @@ public class HttpsUtil {
             msg = https.getResponseMessage();
         } catch (IOException e) {
             logger.error(e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return msg;
@@ -80,7 +81,7 @@ public class HttpsUtil {
      *
      * @return 返回创建的信任管理工厂
      */
-    private static SSLSocketFactory createDefaultSSLSocketFactory() {
+    private static SSLSocketFactory createDefaultSSLSocketFactory() throws Exception {
         TrustManager[] tm = {new DefaultX509TrustManager()};
         SSLContext sslContext = null;
         SSLSocketFactory factory = null;
@@ -94,7 +95,7 @@ public class HttpsUtil {
         }
 
         if (null == factory) {
-            throw new AppException("SSLSocketFactory is null");
+            throw new Exception("SSLSocketFactory is null");
         }
 
         return factory;
