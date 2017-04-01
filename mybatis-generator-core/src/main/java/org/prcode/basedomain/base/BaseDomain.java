@@ -12,11 +12,11 @@ public class BaseDomain {
 
     private Date sys0AddTime;
     private Date sys0UpdTime;
-    private Long sysDelUser;
+    private Date sys0DelTime;
     private Long sys0AddUser;
     private Long sys0UpdUser;
     private Long sys0DelUser;
-    private Byte sysDelState;
+    private Byte sy0sDelState;
 
     public Date getSys0AddTime() {
         return sys0AddTime;
@@ -34,12 +34,12 @@ public class BaseDomain {
         this.sys0UpdTime = sys0UpdTime;
     }
 
-    public Long getSysDelUser() {
-        return sysDelUser;
+    public Date getSys0DelTime() {
+        return sys0DelTime;
     }
 
-    public void setSysDelUser(Long sysDelUser) {
-        this.sysDelUser = sysDelUser;
+    public void setSys0DelTime(Date sys0DelTime) {
+        this.sys0DelTime = sys0DelTime;
     }
 
     public Long getSys0AddUser() {
@@ -66,11 +66,11 @@ public class BaseDomain {
         this.sys0DelUser = sys0DelUser;
     }
 
-    public Byte getSysDelState() {
-        return sysDelState;
+    public Byte getSy0sDelState() {
+        return sy0sDelState;
     }
 
-    public void setSysDelState(Byte sysDelState) {
-        this.sysDelState = sysDelState;
+    public void setSy0sDelState(Byte sy0sDelState) {
+        this.sy0sDelState = sy0sDelState;
     }
 }
