@@ -14,6 +14,6 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Query {
+public @interface Select {
     String value() default "";
 }

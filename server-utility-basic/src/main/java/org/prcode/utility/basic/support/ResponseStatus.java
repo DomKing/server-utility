@@ -27,5 +27,9 @@ public class ResponseStatus {
      * 业务处理异常
      */
     public static final String BUSINESS_FAILED = "0004";
+    /**
+     * 没有权限
+     */
+    public static final String NO_PRIVILEGE = "0005";
 
 }
